@@ -11,7 +11,10 @@ function App() {
 		top: "",
 		bottom: "",
 	});
+	// Initial image state
 	const [imgUrl, setImageUrl] = useState("https://i.imgflip.com/1ur9b0.jpg");
+	// State to display black text
+	const [blackText, setBlackText] = useState(false);
 
 	// Send get request to api
 	async function getMeme() {
@@ -39,11 +42,17 @@ function App() {
 					memeText={memeText}
 					setMemeText={setMemeText}
 					getRandomImage={getRandomImage}
+					blackText={blackText}
+					setBlackText={setBlackText}
 				/>
 				<section className="meme-image">
 					<img src={imgUrl} alt="" />
-					<h2 className="top">{memeText?.top}</h2>
-					<h2 className="bottom">{memeText?.bottom}</h2>
+					<h2 className="top" style={{ color: blackText ? "black" : null }}>
+						{memeText?.top}
+					</h2>
+					<h2 className="bottom" style={{ color: blackText ? "black" : null }}>
+						{memeText?.bottom}
+					</h2>
 				</section>
 			</main>
 		</>
