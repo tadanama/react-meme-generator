@@ -23,11 +23,11 @@ form.meme button {
 form.meme button {
 	font-size: 20px;
 	cursor: pointer;
-  transition: 0.3s;
+	transition: 0.3s;
 }
 
 form.meme button:hover {
-	background-color: black;
+	background-color: #008CBA;
 	color: white;
 }
 
@@ -57,10 +57,16 @@ section.meme-image h2 {
 }
 
 section button {
-  width: 100%;
-  margin-bottom: 20px;
-  padding-block: 10px;
-  font-size: 20px;
-  border-radius: 10px;
-  cursor: pointer;
+	width: 100%;
+	margin-bottom: 20px;
+	padding-block: 10px;
+	font-size: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+section button:hover {
+	background-color: black;
+	color: white;
 }
