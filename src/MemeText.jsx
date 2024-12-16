@@ -1,6 +1,6 @@
 import React from "react";
 
-function MemeText({ memeText, setMemeText, getRandomImage }) {
+function MemeText({ memeText, setMemeText, getRandomImage, setBlackText }) {
 	function handleOnChange(e) {
 		const { name, value } = e.target;
 
@@ -41,6 +41,11 @@ function MemeText({ memeText, setMemeText, getRandomImage }) {
 					Generate new meme
 				</button>
 			</form>
+			<button onClick={(e) => {
+				e.preventDefault();
+
+				setBlackText(previousValue => !previousValue)
+			}}>Toggle black text</button>
 		</section>
 	);
 }
